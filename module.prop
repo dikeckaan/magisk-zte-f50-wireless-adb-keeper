@@ -1,0 +1,7 @@
+id=wireless-adb-keeper
+name=Wireless ADB Keeper
+version=v1.0.0
+versionCode=1
+author=kaandikec
+description=Forces wireless ADB onto port 55555 on every boot; avoids conflict with UFI-TOOLS which uses 5555. Restarts adbd to apply.
+updateJson=https://raw.githubusercontent.com/dikeckaan/magisk-zte-f50-wireless-adb-keeper/main/update.json
