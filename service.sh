@@ -5,6 +5,11 @@
 PORT=55555
 LOG=/data/wireless-adb-keeper.log
 
+# Ensure the log's parent dir exists. /data is normally there, but
+# `mkdir -p` is cheap and protects against weird boot states where
+# the path isn't writable yet.
+mkdir -p "$(dirname "$LOG")" 2>/dev/null
+
 log() {
     if [ -f "$LOG" ]; then
         sz=$(stat -c %s "$LOG" 2>/dev/null || echo 0)
